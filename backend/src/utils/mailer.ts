@@ -1,21 +1,20 @@
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.example.com', // Thay thế bằng host SMTP của bạn
-    port: 587, // Thường là 587 hoặc 465 cho SSL
-    secure: false, // true cho 465, false cho các cổng khác
+    host: 'smtp.example.com',
+    port: 587,
+    secure: false,
     auth: {
-        user: 'your_email@example.com', // Thay thế bằng email của bạn
-        pass: 'your_password' // Thay thế bằng mật khẩu của bạn
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_CODE
     }
 });
 
-export const sendMail = async (to: string, subject: string, text: string, html: string) => {
+export const sendMail = async (to: string, subject: string, html: string) => {
     const mailOptions = {
-        from: 'your_email@example.com', // Thay thế bằng email của bạn
+        from: 'ADMIN FROM BOOKSTORE',
         to,
         subject,
-        text,
         html
     };
 
