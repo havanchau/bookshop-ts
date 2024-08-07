@@ -40,7 +40,7 @@ export class UserController {
      *       500:
      *         description: Internal server error
      */
-    static getUser = async (req: Request, res: Response) => {
+    static get = async (req: Request, res: Response) => {
         const token = req.headers.authorization?.split(' ')[1];
 
         if (!token) {
@@ -92,7 +92,7 @@ export class UserController {
      *       500:
      *         description: Internal server error
      */
-    static updateUser = async (req: Request, res: Response) => {
+    static update = async (req: Request, res: Response) => {
         const token = req.headers.authorization?.split(' ')[1];
 
         if (!token) {
@@ -147,7 +147,7 @@ export class UserController {
      *       500:
      *         description: Internal server error
      */
-    static deleteUser = async (req: Request, res: Response) => {
+    static delete = async (req: Request, res: Response) => {
         const token = req.headers.authorization?.split(' ')[1];
 
         if (!token) {
