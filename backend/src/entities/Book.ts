@@ -12,7 +12,7 @@ export class Book {
     author!: string;
 
     @Column()
-    cost!: string;
+    cost!: number;
 
     @Column()
     discount!: string;
@@ -24,8 +24,17 @@ export class Book {
     edition!: string;
 
     @Column()
-    amount!: Date;
+    amount!: number;
 
     @Column()
-    saler_amount!: Date;
+    saler_amount!: number;
+
+    @Column()
+    is_del!: boolean;
+
+    @Column({ type: 'timestamp', nullable: true })
+    regdate!: Date;
+
+    @Column({ type: 'timestamp', nullable: true })
+    last_update!: Date;
 }

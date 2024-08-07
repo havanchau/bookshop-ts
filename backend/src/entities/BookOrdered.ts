@@ -18,10 +18,16 @@ export class BookOrdered {
     price!: number;
 
     @Column()
+    state!: string;
+
+    @Column()
     discount!: string;
 
     @Column()
     bill_id!: string;
+
+    @Column()
+    is_del!: boolean;
 
     @Column()
     regdate!: Date;

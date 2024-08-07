@@ -4,6 +4,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import AuthRoutes from "./routes/AuthRoutes";
 import BookRoutes from "./routes/BookRoutes";
+import BookOrderedRoutes from "./routes/BookOrderedRoutes";
 import setupSwagger from "./swagger";
 
 createConnection().then(async connection => {
@@ -12,6 +13,7 @@ createConnection().then(async connection => {
 
 	app.use("/auth", AuthRoutes);
 	app.use("/book", BookRoutes);
+	app.use("/book-ordered", BookOrderedRoutes);
 
 	setupSwagger(app);
 
