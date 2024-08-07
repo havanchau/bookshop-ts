@@ -5,7 +5,7 @@ import * as bcrypt from "bcryptjs";
 import * as jwt from "jsonwebtoken";
 import { Token } from "../utils/Token";
 import dotenv from 'dotenv';
-import { sendMail } from "src/utils/mailer";
+import { sendMail } from "../utils/mailer";
 
 dotenv.config();
 
