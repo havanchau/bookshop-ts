@@ -9,6 +9,9 @@ export class Book {
     name!: string;
 
     @Column()
+    author!: string;
+
+    @Column()
     cost!: string;
 
     @Column()
@@ -18,7 +21,7 @@ export class Book {
     discription!: string;
 
     @Column()
-    editions!: string;
+    edition!: string;
 
     @Column()
     amount!: Date;

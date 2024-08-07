@@ -3,6 +3,7 @@ import { createConnection } from "typeorm";
 import express from "express";
 import bodyParser from "body-parser";
 import AuthRoutes from "./routes/AuthRoutes";
+import BookRoutes from "./routes/BookRoutes";
 import setupSwagger from "./swagger";
 
 createConnection().then(async connection => {
@@ -10,6 +11,7 @@ createConnection().then(async connection => {
 	app.use(bodyParser.json());
 
 	app.use("/auth", AuthRoutes);
+	app.use("/book", BookRoutes);
 
 	setupSwagger(app);
 
