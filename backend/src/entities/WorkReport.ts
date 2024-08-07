@@ -1,30 +1,21 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
-export class Employee {
+export class WorkReport {
     @PrimaryGeneratedColumn()
     id!: number;
 
     @Column()
-    username!: string;
+    uid!: number;
 
     @Column()
-    password!: string;
+    month!: number;
 
     @Column()
-    role!: string;
-
-    @Column({ type: 'timestamp' })
-    start_date!: Date;
+    work_day!: string;
 
     @Column({ nullable: true })
-    email!: string;
-
-    @Column({ nullable: true })
-    phone_number!: string;
-
-    @Column({ nullable: true })
-    old_password!: string;
+    sale_number!: number;
 
     @Column({ type: 'timestamp', nullable: true })
     last_login!: Date;
