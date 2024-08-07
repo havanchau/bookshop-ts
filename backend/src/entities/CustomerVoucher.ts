@@ -1,14 +1,14 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
-export class Category {
+export class Voucher {
     @PrimaryGeneratedColumn()
     id!: number;
 
     @Column()
-    type!: string;
+    uid!: number;
 
     @Column()
-    description!: string;
+    voucher_id!: number;
 
 }
